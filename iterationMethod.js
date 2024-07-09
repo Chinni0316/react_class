@@ -242,3 +242,11 @@ const data=[
   ]
   const fakestore=data.filter((data)=>data&&data.rating.rate>4)
   console.log(fakestore)
+  console.log("____________________")
+  const fakestore1=data.map((data)=>data.category)
+  console.log(fakestore1)
+  console.log("_____________________")
+  const fakestore2=data.filter((data)=>data.price>50 && data.price<300)
+  console.log(fakestore2)
+  console.log("___________________________________")
+  
