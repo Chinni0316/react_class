@@ -1,6 +1,9 @@
 const Heading=()=>{
     return(
-        <h1>Heading</h1>
+        <div style={{background:"lightgreen",color:"red"}}>
+        <h1>Nav Bar</h1>
+     
+        </div>
     )
 }
 export default Heading;
