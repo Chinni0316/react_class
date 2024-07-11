@@ -6,7 +6,7 @@ const IplItem=()=>{
         <>
 
         {Ipldata.map((eachIpldata)=>(
-            <center><div style={{border:"2px solid black"}}>
+            <center><div style={{border:"2px solid black", color:"red",padding:"10px" ,margin:"20px 350px",background:"lightblue"}}>
                     <h3>{eachIpldata.name}</h3>
                     <h3>{eachIpldata.no_players}</h3>
                     <img src={eachIpldata.source}  width={150} height={150}/>

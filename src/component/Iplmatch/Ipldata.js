@@ -41,6 +41,11 @@ export const Ipldata=[
     source:"https://tse4.mm.bing.net/th?id=OIP.jhCIz-CKVvMYj9qL_k_JnQAAAA&pid=Api&P=0&h=180",
     trophy:"1 Time",
     no_players:11,
+},{
+    name:"Punjab Kings",
+    source:"https://tse3.mm.bing.net/th?id=OIP.CNX20SCEoGjWKLXtqUhV2QHaIk&pid=Api&P=0&h=180",
+    trophy:"None",
+    no_players:11,
 }
 
 
