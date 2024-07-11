@@ -12,7 +12,10 @@ import IplItem from './component/Iplmatch/Iplmatch';
 
 function App() {
   return (
+    <>
+    
       <IplItem ></IplItem>
+      </>
      );
 }
 

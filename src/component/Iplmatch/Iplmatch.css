@@ -1,0 +1,44 @@
+.IplItem{
+    display: flex;
+}
+.navbar{
+    background-color: rgb(139, 67, 117);
+    position: relative;
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+    margin: 10px;
+    color: white;
+}
+ .footer{
+ background-color: rgb(144, 141, 141);
+ width: 100%;
+ height: 10%;
+
+ bottom: 0;
+ position: fixed;
+ text-align: center;
+ color: white;
+ 
+  }
+ 
+  .main{
+    border: 2px solid rgb(95, 89, 89);
+    margin: 100px 500px;
+    background-color: rgb(230, 130, 204);
+    border-radius: 10px;
+    width: 40%;
+    height: 80%;
+    padding:5px;
+    
+    
+    
+  }
+  .cards{
+    display: grid;
+    grid-template-columns:200px 200px 200px 200px ;
+    justify-content:space-around;
+  }
