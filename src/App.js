@@ -7,26 +7,13 @@ import Button_create from './component/button/button';
 import MainHeading,{Heading2 as SecondaryHeading} from './component/headings/headings';
 import Unorderlist from './component/List/unorderlist';
 import Orderlist from './component/List/orderlist';
+import IplItem from './component/Iplmatch/Iplmatch';
 
 
 function App() {
   return (
-    <div className="App">
-      {/* <header className="App-header">
-       <h1>
-        hello user1
-       </h1> clear
-      </header> */}
-      <Table_name/>
-      <Image_profile/>
-      <Orderlist></Orderlist>
-      <Unorderlist></Unorderlist>
-     
-     
-
-      
-    </div>
-  );
+      <IplItem ></IplItem>
+     );
 }
 
 export default App;
