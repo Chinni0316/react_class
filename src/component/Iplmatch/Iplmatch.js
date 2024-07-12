@@ -1,13 +1,23 @@
 import { Ipldata } from "./Ipldata";
 import "./Iplmatch.css"
+import CustomProgressBar from "../Bootstrap/progress-bar";
 
 const IplItem=()=>{
-    const {name,source,trophy,no_players}=Ipldata
+    const {name,source,trophy,no_players}=Ipldata;
+    
+    const calculatePercentage=(input)=>{
+        const base=30
+        let percentage=(input/base)*100
+        return percentage
+
+    };
+    
     return(
 
         
 
         <div>
+            <h1>Indian Premier League</h1>
             <div className="navbar">
                 <p>Home</p>
                 <p>About</p>
@@ -24,16 +34,16 @@ const IplItem=()=>{
                     <h3>{eachIpldata.name}</h3>
                     <h3>No_Players: {eachIpldata.no_players}</h3>
                     <img src={eachIpldata.source}  width={150} height={150}/>
-                    
-                    <h3>Trophy: {eachIpldata.trophy}</h3>
-                
-            </div></center>
+                     <h3>Trophy: {eachIpldata.trophy}</h3>
+                    <CustomProgressBar scale={calculatePercentage(eachIpldata.trophy)}/><br></br>
+                </div></center>
             
         ))}
         </div>
          <div className="footer">
-            <p>Thank for visit again..</p>
-            <p>Done by Ashwini..</p>
+            <p>Thank for visit .We will provide more information..</p>
+            <img src=""></img>
+            
 
          </div>
         </div>
