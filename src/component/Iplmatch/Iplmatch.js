@@ -5,6 +5,8 @@ const IplItem=()=>{
     const {name,source,trophy,no_players}=Ipldata
     return(
 
+        
+
         <div>
             <div className="navbar">
                 <p>Home</p>
