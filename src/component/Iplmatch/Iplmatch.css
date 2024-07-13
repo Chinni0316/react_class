@@ -40,5 +40,5 @@ position: relative;
   }
 h1{
   text-align: center;
-  background-color: rgb(177, 251, 225);
+  background-image: linear-gradient(orange,white,green)
 }

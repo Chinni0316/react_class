@@ -118,4 +118,34 @@ const Card=(prop)=>{
     </>
   )
 }
+------------------------------
+import "./listdata"
+const Custom_List=({list})=>{
+    return(
+        <ol>
+         {list.map((eachitem)=>(
+            <li>{eachitem}</li>
+        ))}
+        </ol>
+
+    )
+}
+export default Custom_List;
+
+----
+const student=["Ashwini","Chinni","Srinivas","Ramulu","Ganga"]
+const value=[1,4,6,3,10]
+function App() {
+  return (
+    <div>
+      
+    
+    <Custom_List list={["Apple","Banana","Cherry"]}></Custom_List>
+    <Custom_List list={student}></Custom_List>
+    <Custom_List list={value}></Custom_List>
+    {/* <Custom_List list={list.name}></Custom_List> */}
+  </div>
+     );
+}
+export default App;
 

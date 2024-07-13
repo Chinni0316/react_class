@@ -1,12 +1,12 @@
 import { Ipldata } from "./Ipldata";
 import "./Iplmatch.css"
-import CustomProgressBar from "../Bootstrap/progress-bar";
+import CustomProgressBar from "../bootstrap/progress-bar";
 
 const IplItem=()=>{
     const {name,source,trophy,no_players}=Ipldata;
     
     const calculatePercentage=(input)=>{
-        const base=30
+        const base=17
         let percentage=(input/base)*100
         return percentage
 
@@ -22,10 +22,9 @@ const IplItem=()=>{
                 <p>Home</p>
                 <p>About</p>
                 <p>Contant</p>
+
+                
                 <p>Team</p>
-                
-                  
-                
             </div>
             <div className="cards">
 
