@@ -1,4 +1,4 @@
-import "./listdata"
+
 const Custom_List=({list})=>{
     return(
         <ul>
