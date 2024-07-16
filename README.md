@@ -148,4 +148,65 @@ function App() {
      );
 }
 export default App;
+------------------------
+const Recipes = ({ recipe }) => {
+  return (
+    <div className='recipeCard'>
+      <CustomHeading title={recipe.name} />
+      <img src={recipe.image} alt="image missing" height={200} width={200} />
+      <p>Cuisine: {recipe.cuisine}</p>
+      <p style={{color:'red'}}><b>INGREDIENTS</b></p>
+      <ul>
+        {recipe.ingredients.map((ingredient, index) => (
+          <li key={index}>{ingredient}</li>
+        ))}
+      </ul>
+      <p style={{color:'red'}}><b>INSTRUCTIONS</b></p>
+      <ol>
+        {recipe.instructions.map((instruction, index) => (
+          <li key={index}>{instruction}</li>
+        ))}
+      </ol>
+      <p>preparation time : {recipe.prepTimeMinutes}</p>
+      <p>Preparation time : {recipe.prepTimeMinutes}</p>
+      <p>cookTimeMinutes : {recipe.cookTimeMinutes}</p>
+      <p>servings : {recipe.servings}</p>
+      <p>difficulty : {recipe.difficulty}</p>
+      <p>cuisine : {recipe.cuisine}</p>
+      <p>caloriesPerServing : {recipe.caloriesPerServing}</p>
+    </div>
+  );
+}
+
+export default Recipes;
+------
+const Recipes_data=(prop)=>{
+  const recipe={prop}
+    return(
+        <div className="recipe-card">
+        {/* <img src={recipe.image} alt={recipe.name} />
+        <h2>{recipe.name}</h2>
+        <p><strong>Difficulty:</strong> {recipe.difficulty}</p>
+        <p><strong>Cuisine:</strong> {recipe.cuisine}</p>
+        <p><strong>Servings:</strong> {recipe.servings}</p>
+        <p><strong>Calories per Serving:</strong> {recipe.caloriesPerServing}</p>
+        <p><strong>Rating:</strong> {recipe.rating} ({recipe.reviewCount} reviews)</p>
+        <p><strong>Meal Type:</strong> {recipe.mealType.join(', ')}</p>
+        <h3>Ingredients:</h3> */}
+        <ul>
+
+          {recipe[0].ingredients.map((ingredient, index) => (
+            <li key={index}>{ingredient}</li>
+          ))}
+        </ul>
+        <h3>Instructions:</h3>
+        <ol>
+          {recipe[0].instructions.map((instruction, index) => (
+            <li key={index}>{instruction}</li>
+          ))}
+        </ol>
+      </div>
+    )
+}
+export default Recipes_data;
 
