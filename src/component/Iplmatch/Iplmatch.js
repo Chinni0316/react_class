@@ -42,9 +42,7 @@ const IplItem=()=>{
          <div className="footer">
             <p>Thank for visit .We will provide more information..</p>
             <img src=""></img>
-            
-
-         </div>
+        </div>
         </div>
     )
 }
