@@ -11,6 +11,23 @@ const IplItem=()=>{
         return percentage
 
     };
+    handleClick=(targetid)=>{
+        const newState=this.iplhandler(IplItem,targetid)
+        this.setState({
+            IplItem:newState,
+        });
+    };
+    iplhandler=(IplItem,targetid)=>{
+        const updatedIplTeam=IplItem.map(eachIpldata=>{
+            if(eachIpldata.id===targetid){
+                return{...eachIpldata,trophy:eachIpldata.trophy+1}
+            }
+            else{
+                return eachIpldata
+            }
+        })
+        return updatedIplTeam
+    }
     
     return(
 
@@ -22,10 +39,9 @@ const IplItem=()=>{
                 <p>Home</p>
                 <p>About</p>
                 <p>Contant</p>
-
-                
                 <p>Team</p>
             </div>
+            
             <div className="cards">
 
         {Ipldata.map((eachIpldata)=>(
@@ -34,6 +50,7 @@ const IplItem=()=>{
                     <h3>No_Players: {eachIpldata.no_players}</h3>
                     <img src={eachIpldata.source}  width={150} height={150}/>
                      <h3>Trophy: {eachIpldata.trophy}</h3>
+                     <button onClick={()=>this.handleClick(eachIpldata.id)}></button>
                     <CustomProgressBar scale={calculatePercentage(eachIpldata.trophy)}/><br></br>
                 </div></center>
             
@@ -41,8 +58,9 @@ const IplItem=()=>{
         </div>
          <div className="footer">
             <p>Thank for visit .We will provide more information..</p>
-            <img src=""></img>
+            
         </div>
+        <button>button</button>
         </div>
     )
 }
