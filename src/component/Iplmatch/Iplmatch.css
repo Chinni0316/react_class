@@ -1,7 +1,7 @@
 
 
 .navbar{
-    background-color: rgb(196, 75, 178);
+    background-color: rgb(177, 91, 164);
     
     position: fixed;
     width: 100%;
@@ -25,7 +25,7 @@ position: relative;
   }
  
   .main{
-    background-color: rgb(230, 130, 204);
+    background-color: rgb(192, 230, 130);
     border-radius: 10px;
     margin: 25px;
     width:420px;
