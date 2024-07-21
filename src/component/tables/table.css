@@ -1,10 +1,31 @@
-table,tr,td,th{
-    border: 2px solid black;
-    border-collapse: collapse;
-    width: 100px;
-    text-shadow: 2px;
-    background-color: lightcyan;
-    
-    margin: auto;
 
-}
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove spaces between table cells */
+    margin-bottom: 20px; /* Example margin */
+  }
+  
+  /* Table header styling */
+  th {
+    background-color: #f9f6f6; /* Light gray background */
+    text-align: left; /* Align text to the left */
+    padding: 8px; /* Padding inside table header cells */
+  }
+  
+  /* Table row (tbody) styling */
+  td {
+    border: 1px solid #2c2b2b; /* Light gray border */
+    padding: 8px; /* Padding inside table cells */
+  }
+  
+  /* Alternating row colors */
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    border: 2px solid black; /* Light alternate row background */
+  }
+  
+  /* Hover effect on rows */
+  tbody tr:hover {
+    background-color: #e0e0e0; 
+    border: 2px solid black;/* Light gray background on hover */
+  }

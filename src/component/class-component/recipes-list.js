@@ -43,7 +43,8 @@ class RecipeList extends Component{
             <h4>Please wait....</h4>
             :(
             <div>
-            {this.state.recipes_list.map((eachdata,id)=>{
+            {
+            this.state.recipes_list.map((eachdata,id)=>{
                 const {name,image,ingredients}=eachdata;
                 return(
                     <React.Fragment key={id}>
