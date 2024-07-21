@@ -11,6 +11,9 @@ import SquareComponent from "./component/class-component/square-taks";
 import { ProgressBar, Spinner } from "react-bootstrap";
 import CustomSpinner from "./component/spinner/custom_spinner";
 import IplTeams from "./component/card Ipl/cardipl";
+import FetchExamples from "./component/class-component/fetchexamples";
+import RepiceList from "./component/class-component/recipes-list";
+import RecipeList from "./component/class-component/recipes-list";
 
 
 
@@ -27,7 +30,9 @@ return(
      <SquareComponent></SquareComponent>
      <Spinner></Spinner>
      <CustomSpinner></CustomSpinner> */}
-     <IplTeams></IplTeams>
+     {/* <IplTeams></IplTeams> */}
+     <FetchExamples></FetchExamples>
+    <RecipeList></RecipeList>
     </>
 )
 };
