@@ -1,9 +1,10 @@
-const Heading=()=>{
-    return(
-        <div>
-        <h1>Fruits</h1>
+const Heading=(prop)=>{
+
+        let {title="default"}=prop;
+        //   title="hello";
+       return( <h2>{title}</h2>
      
-        </div>
+        
     )
 }
 export default Heading;
