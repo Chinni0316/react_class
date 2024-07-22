@@ -4,14 +4,14 @@ class Counter extends Component{
     state={
         count:10
     };
-    inscrementhandler=()=>{
+    inscrement_handler=()=>{
         this.setState(
             {
                 count:this.state.count+1,
             },()=>{}
         );
     };
-    decrementhandler=()=>{
+    decrement_handler=()=>{
         
         this.setState(
             {
@@ -19,7 +19,7 @@ class Counter extends Component{
             },()=>{}
         );
     };
-    resethandler=()=>{
+    reset_handler=()=>{
         this.setState(
             {
                 count:10
@@ -36,9 +36,9 @@ class Counter extends Component{
            
            <h3>{this.state.count}</h3>
            <br></br><br></br>
-           <button onClick={this.inscrementhandler}style={{ borderRadius:"5px"}}>Inscrement</button>
-           <button onClick={this.decrementhandler} style={{borderRadius:"5px"}}>Decrement</button><br></br><br></br>
-           <button onClick={this.resethandler} style={{borderRadius:"5px"}}>Reset</button>
+           <button onClick={this.inscrement_handler}style={{ borderRadius:"5px"}}>Inscrement</button>
+           <button onClick={this.decrement_handler} style={{borderRadius:"5px"}}>Decrement</button><br></br><br></br>
+           <button onClick={this.reset_handler} style={{borderRadius:"5px"}}>Reset</button>
            </div>
            </center>
             </>
