@@ -1,0 +1,103 @@
+/* .card{
+    background-color: green;
+    width: 50%;
+    text-align: center;
+    margin: 20px ;
+    padding: 10px;
+    display: grid;
+    
+    
+} 
+.Main{
+    border: 2px solid black;
+    text-align: center;
+    
+} 
+  .main{
+    border:2px solid black;
+    text-align: center; */
+ /* }  */
+
+ .main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: auto auto;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .Main {
+    margin: 10px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 16px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h6 {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #333;
+  } 
+ 
+  /* card.css */
+
+/* .main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.Main {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin: 16px;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  transition: transform 0.2s;
+  display:flex;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h6 {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+h3 {
+  text-align: center;
+  color: #888;
+}
+
+h4 {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+} */
