@@ -10,6 +10,12 @@ import ParentComponent from "./component/purecomponent'/parent";
 import Mounting_component from "./component/class-component/mountingcomponent/mounting_class_base_component";
 import Updating_Component from "./component/class-component/updating_parse/updatingcomponents";
 import CardComponent from "./component/class-component/card";
+import UseState_example from "./component/hookstopics/useState/usestates ex1";
+import UseState_example1 from "./component/hookstopics/useState/usestateex2";
+import UseState_table from "./component/hookstopics/useState/table";
+import { SquareLoader } from "react-spinners";
+import Square_example from "./component/hookstopics/useState/square";
+import List_item from "./component/hookstopics/useState/list_delete";
 
 
 
@@ -18,8 +24,11 @@ const App = () => {
     
 return(
     <>
-    <CardComponent></CardComponent>
-    {/* <Counter></Counter> */}
+    <UseState_example></UseState_example>
+    <UseState_example1></UseState_example1>
+    <UseState_table></UseState_table>
+    <Square_example></Square_example>  
+    <List_item></List_item>  
     </>
 )
 };
