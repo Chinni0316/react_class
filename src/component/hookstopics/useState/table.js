@@ -9,7 +9,8 @@ const UseState_table=()=>{
             servings: 4,
             difficulty: "Easy",
             cuisine: "Italian"
-        },{
+        }
+        ,{
             recipes_name:"Vegetarian Stir-Fry",
             prepTimeMinutes: 15,
             cookTimeMinutes: 10,
@@ -53,26 +54,36 @@ const UseState_table=()=>{
         <React.Fragment>
          <h3>UseState_table</h3>
          <button onClick={table_handler}>add table</button>
-        <table>
+        <table style={{borderCollapse:"collapse" ,width:"100%"}}>
+            <thead>
             <tr>
+                <th style={{border:"2px solid black"}}>Recipes_name</th>
+                <th style={{border:"2px solid black"}}>servings</th>
+                <th style={{border:"2px solid black"}}>cookTimeMinutes</th>
+                <th style={{border:"2px solid black"}}>prepTimeMinutes</th>
+                <th style={{border:"2px solid black"}}>difficulty</th>
+                <th style={{border:"2px solid black"}}>cuisine</th>
+            </tr>
+            </thead>
+        
          {table.map((each_table,index)=>{
             return(
                 <React.Fragment key={index}>
-                    <td style={{border:"2px solid black"}}>
+                    <tr>
 
-                    <h4>Recipes: {each_table.recipes_name}</h4>
-                    <h4>Recipes: {each_table.servings}</h4>
-                    <h4>Recipes: {each_table.cookTimeMinutes}</h4>
-                    <h4>Recipes: {each_table.prepTimeMinutes}</h4>
-                    <h4>Recipes: {each_table.difficulty}</h4>
-                    <h4>Recipes: {each_table.cuisine}</h4>
+                    <td style={{border:"2px solid black"}}> {each_table.recipes_name}</td>
+                    <td style={{border:"2px solid black"}}> {each_table.servings}</td>
+                    <td style={{border:"2px solid black"}}> {each_table.cookTimeMinutes}</td>
+                    <td style={{border:"2px solid black"}}> {each_table.prepTimeMinutes}</td>
+                    <td style={{border:"2px solid black"}}> {each_table.difficulty}</td>
+                    <td style={{border:"2px solid black"}}> {each_table.cuisine}</td>
                     <button onClick={()=>delete_handler(index)}>delete </button>
-                    </td>
+                    </tr>
                     
                     </React.Fragment>
             )
          })}
-         </tr>
+         
          
           </table>
         </React.Fragment>
