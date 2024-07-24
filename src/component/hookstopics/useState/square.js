@@ -18,7 +18,7 @@ const Square_example=()=>{
                 return(
                     <div className={
                         (index+1)%2===0?"square-card-highlight":"square-card-not-highlight"
-                    }>
+                    } >
                      <center>{index+1}</center>
                     </div>
                 )
