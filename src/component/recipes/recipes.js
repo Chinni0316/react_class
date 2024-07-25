@@ -1254,8 +1254,8 @@ function Card() {
     <div className="App">
       <h1 className='recipes'>RECIPES</h1>
       <div className="cards-container">
-        {Items["recipes"].map((Items, index) => (
-          <div className="card" key={index}>
+        {Items["recipes"].map((Items, id) => (
+          <div className="card" key={id}>
             <img  src={Items.image} alt={Items.name}  width={200} height={200}/>
             <div className="info">
               <h1>{Items.name}</h1>
