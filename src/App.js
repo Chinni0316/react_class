@@ -1,9 +1,9 @@
 import React from "react";
+import TableComponent from "./component/hookstopics/useEffect/useeffect task1"
+import WeatherComponent from "./component/hookstopics/useEffect/weatherapi";
 import ShowGreeting from "./component/hookstopics/useState/useState ex3";
-import UseState_table from "./component/hookstopics/useState/table";
-import Card from "./component/recipes/recipes";
-import CountComponent from "./component/hookstopics/useEffect/useeffectex1";
-import TableComponent from "./component/hookstopics/useEffect/useeffect task1";
+import SeasonComponent from "./component/hookstopics/useEffect/useeffect task2";
+
 
 
 
@@ -13,11 +13,11 @@ const App = () => {
     
 return(
     <>
-    {/* <UseState_table></UseState_table>
-    <ShowGreeting></ShowGreeting>
-    <Card></Card> */}
-    {/* <CountComponent></CountComponent> */}
-    <TableComponent></TableComponent>
+    <WeatherComponent></WeatherComponent>
+{/* <TableComponent></TableComponent> */}
+<ShowGreeting></ShowGreeting>
+<SeasonComponent></SeasonComponent>
+
    
     </>
 )
