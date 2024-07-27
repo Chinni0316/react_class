@@ -78,9 +78,9 @@ const WeatherComponent=()=>{
             <h3>{each.temperature}</h3>
             <h3>{each.longitude}</h3>
             
-            </div>
-        )
-      })}
+            </div> 
+        ) 
+       })} 
 
       
         </>
