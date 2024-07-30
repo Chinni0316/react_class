@@ -10,6 +10,11 @@ import SimpleForm from "./component/hookstopics/form/formvalidation";
 import Uncontrolled from "./component/hookstopics/form/uncontrolled/uncontrolled";
 import FormWithReactHookForm from "./component/hookstopics/form/controlled form/hooks";
 import InputFormDifferent from "./component/hookstopics/form/controlled form/different types input";
+import UncontrolledFromEx from "./component/hookstopics/form/uncontrolled/uncontrolled ex";
+import FormTable from "./component/hookstopics/form/controlled form/form_table ";
+import { Card } from "react-bootstrap";
+import From_ListComponent from "./component/hookstopics/form/controlled form/forms _details_list _formate";
+import ControlledRegistrationForm from "./component/hookstopics/form/controlled form/newform";
 
 
 
@@ -21,7 +26,14 @@ const App = () => {
 return(
     <>
     {/* <Uncontrolled></Uncontrolled> */}
-    <InputFormDifferent></InputFormDifferent>
+    {/* <InputFormDifferent></InputFormDifferent> */}
+    {/* <UncontrolledFromEx></UncontrolledFromEx> */}
+    <FormTable></FormTable>
+    {/* <WeatherComponent>  </WeatherComponent> */}
+    {/* <From_ListComponent></From_ListComponent> */}
+    <ControlledRegistrationForm></ControlledRegistrationForm>
+
+    
 
    
     </>

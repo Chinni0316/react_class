@@ -35,6 +35,7 @@ const WeatherData=()=>{
     function fail()
     {
        // Could not obtain location
+       
     }
     const fetchWeather=async(lat,lon)=>{
         try{

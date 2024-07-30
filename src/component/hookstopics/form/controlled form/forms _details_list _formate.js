@@ -1,11 +1,14 @@
+
+
 import {  useState } from "react"
 
-const InputFormDifferent=()=>{
+const From_ListComponent=()=>{
     const [userName,setUserName]=useState("")
     const [password,setPassword]=useState("")
     const [userNameErr,SetUserNameError]=useState(false)
     const [passwordErr,setPasswordErr]=useState(false)
     const [userdata,setUserData]=useState({})
+    const [list,setList]=useState([])
    
     
     const submitHandler=(event)=>{
@@ -30,6 +33,8 @@ const InputFormDifferent=()=>{
             }
             else{
                 console.log(finalResponse,"final response")
+                const totalname=finalResponse.firstName+finalResponse.lastName
+                setList([...list,totalname])
                 setUserData(finalResponse)
             }
         }
@@ -59,7 +64,7 @@ const InputFormDifferent=()=>{
             setPasswordErr(false)
         }
     }
-    // const validate=()=>{
+    // const validate=(value)=>{
     //     return value.length<15;
         
     // }
@@ -68,11 +73,7 @@ const InputFormDifferent=()=>{
         {
          Object.keys(userdata).length>0 ?
          <>
-         <h3>ID : {userdata.id}</h3>
-         <h3>Welcome user{userdata.firstName}{userdata.lastName}</h3>
-         <img src={userdata.image} width={200} height={200}/>
-         <h3>Gender: {userdata.gender}</h3>
-         <h3>Email: {userdata.email}</h3>
+        
          
  
          </>
@@ -105,7 +106,21 @@ const InputFormDifferent=()=>{
          <button type="submit">Submit</button>
      </form>
         }
-        </>
+        <h3>List Registration User..</h3>
+        <ol>
+        {
+            list.map((each)=>{
+                <li>{each}</li>
+                {console.log(each.id)}
+            })
+        }
+       </ol>
+            
+       
+        
+        
+
+    </>
     )
 }
-export default InputFormDifferent;
+export default From_ListComponent;
