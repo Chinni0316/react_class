@@ -13,15 +13,16 @@ const NavigationStack=()=>{
         <BrowserRouter>
         <Routes>
             <Route path="/" element={<HomeScreen/>}/>
-            <Route path="/about" element={<AboutScreen/>}/>
-            <Route path="/blog" element={<BlogScreen/>}/>
-            <Route path="/setting" element={<SettingScreen/>}/>
+            <Route path="/registration" element={<AboutScreen/>}/>
+            <Route path="/login" element={<BlogScreen/>}/>
+            <Route path="/location" element={<SettingScreen/>}/>
+            <Route path="/menu" element={<UserScreen/>}/>
             <Route path="*" element={<InvalidScreen/>}/>
-            <Route path="user" element={<UserScreen/>}/>
+            {/* <Route path="user" element={<UserScreen/>}/>
             <Route path="user1" element={<UserScreen/>}/>
             <Route path="user2" element={<UserScreen/>}/>
             <Route path="user/:userid" element={<UserScreen/>}/>
-            <Route path="admin" element={<AdminScreen/>}/>
+            <Route path="admin" element={<AdminScreen/>}/> */}
         </Routes>
 
         </BrowserRouter>

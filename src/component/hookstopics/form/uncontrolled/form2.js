@@ -31,8 +31,8 @@ const submitHandler=(event)=>{
     return(
         <>
         <form onSubmit={submitHandler}>
-        <h3>Welcome User....</h3>
-        <h1>RegistrationFrom</h1>
+        {/* <h3>Welcome User....</h3>
+        <h1>RegistrationFrom</h1> */}
         
     
         <div>
@@ -59,14 +59,14 @@ const submitHandler=(event)=>{
             placeholder="Enter Email address"
             ref={Email}/>
         </div>
-        <div>
+        {/* <div>
             <label><b>PhoneNumber</b></label>
             <input
             type="text"
             className="form-control"
             placeholder="Enter Phone Number"
             ref={PhoneNumber}/>
-        </div>
+        </div> */}
         
         {error&&<span style={{color:"red"}}>{error}</span>}
         <button type="submit">Submit</button>

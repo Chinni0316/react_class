@@ -2,7 +2,7 @@ import { Link ,NavLink} from "react-router-dom";
 import"./navbar.css"
 
 const NavBar=()=>{
-    const LinkStyle={margin:25,textDecoration:"none"}
+    const LinkStyle={margin:110,textDecoration:"none"}
    
     
     return ( <>
@@ -13,14 +13,19 @@ const NavBar=()=>{
          <NavLink  to={"/"} style={LinkStyle}>Main</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to={"/about"} style={LinkStyle}>About</NavLink>
+          <NavLink to={"/registration"} style={LinkStyle}>Registration</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to={"/blog"} style={LinkStyle}>Blog</NavLink>
+          <NavLink to={"/login"} style={LinkStyle}>Login</NavLink>
         </li>
         <li className="nav-item">
-         <NavLink to={"/setting"} style={LinkStyle}>Setting</NavLink>
+         <NavLink to={"/location"} style={LinkStyle}>Location</NavLink>
         </li>
+        <li className="nav-item">
+         <NavLink to={"/menu"} style={LinkStyle}>Menu</NavLink>
+        </li>
+        
+        
 
       </ul>
     </div>
