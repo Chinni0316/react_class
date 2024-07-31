@@ -2,7 +2,7 @@ import { Link ,NavLink} from "react-router-dom";
 import"./navbar.css"
 
 const NavBar=()=>{
-    const LinkStyle={margin:110,textDecoration:"none"}
+    const LinkStyle={margin:10,textDecoration:"none"}
    
     
     return ( <>
@@ -24,6 +24,12 @@ const NavBar=()=>{
         <li className="nav-item">
          <NavLink to={"/menu"} style={LinkStyle}>Menu</NavLink>
         </li>
+        <li className="nav-item">
+         <NavLink to={"/recipes"} style={LinkStyle}>Recipes</NavLink>
+
+        </li>
+       
+
         
         
 

@@ -11,10 +11,6 @@ const HomeScreen=()=>{
         <NavBar/>
         <h3>Welcome to User Place wait page is loading..</h3>
         <Spinner></Spinner>
-       
-      
-        
-        
         </>
     )
 }

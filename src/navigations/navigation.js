@@ -6,6 +6,8 @@ import SettingScreen from "../screen/setting_screen"
 import InvalidScreen from "../screen/invalid_screen"
 import UserScreen from "../screen/user_screen"
 import AdminScreen from "../screen/admin_screen"
+import MenuScreen from "../screen/menu_screen"
+import RecipesScreen from "../screen/recipes_screen"
 
 
 const NavigationStack=()=>{
@@ -13,16 +15,18 @@ const NavigationStack=()=>{
         <BrowserRouter>
         <Routes>
             <Route path="/" element={<HomeScreen/>}/>
-            <Route path="/registration" element={<AboutScreen/>}/>
-            <Route path="/login" element={<BlogScreen/>}/>
-            <Route path="/location" element={<SettingScreen/>}/>
-            <Route path="/menu" element={<UserScreen/>}/>
+            <Route path="registration" element={<AboutScreen/>}/>
+            <Route path="login" element={<BlogScreen/>}/>
+            <Route path="location" element={<SettingScreen/>}/>
+            <Route path="menu" element={<MenuScreen/>}/>
             <Route path="*" element={<InvalidScreen/>}/>
-            {/* <Route path="user" element={<UserScreen/>}/>
-            <Route path="user1" element={<UserScreen/>}/>
-            <Route path="user2" element={<UserScreen/>}/>
-            <Route path="user/:userid" element={<UserScreen/>}/>
-            <Route path="admin" element={<AdminScreen/>}/> */}
+            <Route path="recipes" element={<UserScreen/>}/>
+            {/* <Route path="user1" element={<UserScreen/>}/>
+            <Route path="user2" element={<UserScreen/>}/> */}
+            <Route path="recipes/:cuisine/:recipesId" element={<RecipesScreen/>}/>
+            {/* <Route path="admin" element={<AdminScreen/>}/> */}
+            {/* <Route path="recipes/:recipesid" element={<RecipesScreen/>}/> */}
+            
         </Routes>
 
         </BrowserRouter>
