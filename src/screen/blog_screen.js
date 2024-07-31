@@ -1,0 +1,15 @@
+import ControlledRegistrationForm from "../component/hookstopics/form/controlled form/newform";
+import RegistrationFrom from "../component/hookstopics/form/uncontrolled/form2";
+import ListItem from "../component/List/ListItems";
+import NavBar from "../component/navbar/navbar";
+
+const BlogScreen=()=>{
+    return(
+        <>
+           <NavBar/>
+        <h3>Welcome to Login Form</h3>
+     <RegistrationFrom/>
+        </>
+    )
+}
+export default BlogScreen;

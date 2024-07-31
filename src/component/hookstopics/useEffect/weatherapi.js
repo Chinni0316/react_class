@@ -21,7 +21,7 @@ import { useEffect, useState } from "react";
  }
 
 const WeatherComponent=()=>{
-    const [weather,setWeather]=useState("")
+    const [weather,setWeather]=useState([])
     const [loading,setLoading]=useState(true)
     const [temperature,setTemperature]=useState("")
     useEffect(()=>{

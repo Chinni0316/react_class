@@ -1,11 +1,13 @@
+import { tab } from "@testing-library/user-event/dist/tab"
 import {  useState } from "react"
 
-const InputFormDifferent=()=>{
+const FormTable=()=>{
     const [userName,setUserName]=useState("")
     const [password,setPassword]=useState("")
     const [userNameErr,SetUserNameError]=useState(false)
     const [passwordErr,setPasswordErr]=useState(false)
     const [userdata,setUserData]=useState({})
+    const [table,setTable]=useState([])
    
     
     const submitHandler=(event)=>{
@@ -30,6 +32,9 @@ const InputFormDifferent=()=>{
             }
             else{
                 console.log(finalResponse,"final response")
+                // const totalname=finalResponse.firstName+finalResponse.lastName
+                
+                setTable([...table,finalResponse])
                 setUserData(finalResponse)
             }
         }
@@ -59,23 +64,44 @@ const InputFormDifferent=()=>{
             setPasswordErr(false)
         }
     }
-    // const validate=()=>{
-    //     return value.length<15;
-        
-    // }
+    
+    console.log(userdata,table)
     return(
         <>
         {
          Object.keys(userdata).length>0 ?
-         <>
-         <h3>ID : {userdata.id}</h3>
-         <h3>Welcome user{userdata.firstName}{userdata.lastName}</h3>
-         <img src={userdata.image} width={200} height={200}/>
-         <h3>Gender: {userdata.gender}</h3>
-         <h3>Email: {userdata.email}</h3>
+         <table style={{border:"2px solid black"}}>
+         
+         <thead>
+            <tr>
+                <th style={{border:"2px solid black"}}>ID</th>
+                <th style={{border:"2px solid black"}}>FirstName</th>
+                <th style={{border:"2px solid black"}}>LastName</th>
+                <th style={{border:"2px solid black"}} >Email</th>
+                <th style={{border:"2px solid black"}}>Gender</th>
+                <th style={{border:"2px solid black"}}>Image</th>
+            </tr>
+         </thead>
+         <tbody>
+            {table.map((each)=>{
+                return(
+                <tr key={each.id}>
+                    {console.log(each.id,each.firstName)}
+                    <td style={{border:"2px solid black"}}>{each.id}</td>
+                    <td style={{border:"2px solid black"}}>{each.firstName}</td>
+                    <td style={{border:"2px solid black"}}>{each.lastName}</td>
+                    <td style={{border:"2px solid black"}}>{each.email}</td>
+                    <td style={{border:"2px solid black"}}>{each.gender}</td>
+                    <td style={{border:"2px solid black"}}>
+                    <img src={each.image} width={200} height={200}/>
+                    </td>
+
+                </tr>)
+})}
+         </tbody>
          
  
-         </>
+         </table>
          :
          <form onSubmit={submitHandler} style={{maxWidth:500}}>
          <div>
@@ -105,7 +131,9 @@ const InputFormDifferent=()=>{
          <button type="submit">Submit</button>
      </form>
         }
+        
+        
         </>
     )
 }
-export default InputFormDifferent;
+export default FormTable;

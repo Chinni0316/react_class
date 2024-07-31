@@ -1,20 +1,23 @@
 import { useRef, useState } from "react";
 
 const Uncontrolled=()=>{
-    const [err,setErr]=useState()
+    const [err,setErr]=useState("")
     const UserName=useRef()
     const EmailRef=useRef()
     const PasswordRef=useRef()
-    const submitHandler=()=>{
+    const submitHandler=(event)=>{
+        event.preventDefault();
         const userNameEntered=UserName.current.value;
         const emailEntered=EmailRef.current.value;
         const passwordEntered=PasswordRef.current.value;
         console.log(passwordEntered,userNameEntered,emailEntered)
-        if(userNameEntered>15 && passwordEntered>9){
-            setErr(null)
+        if(userNameEntered.length<15 && passwordEntered .length<15){
+            setErr()
+            console.log("executes")
        successSubmit()
         }
         else{
+            // setErr()
             setErr("place enter less then 15 character And password less then 9..")
 
         }
@@ -26,30 +29,31 @@ const Uncontrolled=()=>{
     
     return(
         <>
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} style={{textAlign:"center"}}>
+            <h3>Login Form</h3>
             <div>
-                <label>UserName</label>
+                <label>UserName :</label>
                 <input 
                 type="text"
                  placeholder="Enter User Name"
                  ref={UserName}/>
-            </div>
+            </div><br></br>
             <div>
-                <label>Email Address</label>
+                <label>Email Address:</label>
                 <input 
                 type="email"
                 placeholder="Enter User email"
                 ref={EmailRef}/>
-            </div>
+            </div><br></br>
             <div>
-                <label>Password</label>
+                <label>Password :</label>
                 <input 
                 type="text"
                 placeholder="Enter password"
                 ref={PasswordRef}/>
-            </div>
+            </div><br></br>
             {err&&<span style={{color:"red"}}>{err}</span>}
-            <button type="submit">Submit</button>
+            <button type="text">Submit</button>
         </form>
         </>
     )
