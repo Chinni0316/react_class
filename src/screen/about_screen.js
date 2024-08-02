@@ -11,6 +11,7 @@ const AboutScreen=()=>{
         <NavBar/>
         <h3>Welcome to Registration from</h3>
        <ControlledRegistrationForm/>
+       <Country_Name/>
         
         </>
     )
