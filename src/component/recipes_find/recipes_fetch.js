@@ -53,11 +53,12 @@ const RecipesData=()=>{
         {Object.keys(select).length>0 &&(
             <div className="main">
                 <h4>ID: {select.id}</h4>
-                <h4>DishName: {select.name}</h4>
+                <h3>DishName: {select.name}</h3>
                <img src={select.image} width={200} height={200}/>
-               <h4>MealType: {select.mealType}</h4>
-               <h4>Rating: {select.rating}</h4>
-               <h4>{select.cuisine}</h4>
+               <p>MealType: {select.mealType}</p>
+               <p>Rating: {select.rating}</p>
+               <p>Cuisine: {select.cuisine}</p>
+
                 
             </div>
         )}

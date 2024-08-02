@@ -8,8 +8,8 @@ const BlogScreen=()=>{
     return(
         <>
            <NavBar/>
-        <h3>Welcome to Login Form</h3>
-     <RegistrationFrom/>
+        <h3>Welcome to Country Data</h3>
+     {/* <RegistrationFrom/> */}
      <CountryApi></CountryApi>
         </>
     )

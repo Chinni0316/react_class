@@ -1,6 +1,14 @@
 .main{
-    padding: 100px;
+    padding: 10px 20px;
     text-align: center;
-    border: 2px solid black;
-    margin: 20px 400px;
+    border-radius: 15px;
+    margin: 20px 450px;
+    
+    background-color: rgb(158, 236, 236);
+}
+img{
+    border-radius:20%;
+}
+.main:hover{
+    transform: scale(1.05);
 }
