@@ -9,6 +9,7 @@ class Country_Name  extends Component{
         error:false
     };
     fetch_data=async()=>{
+    
         try{
             const {status,data}=await axios.get ("https://restcountries.com/v3.1/all");
             console.log(status,data)
@@ -43,7 +44,7 @@ class Country_Name  extends Component{
                 <h4>Please wait.....</h4>
                 :
                 (
-                    <>
+                    <div className="country">
                     {
                         this.state.country.map((eachdata,id)=>{
                         const {name,capital,region,
@@ -63,7 +64,7 @@ class Country_Name  extends Component{
                         )
                         })
                     }
-                    </>
+                    </div>
                 )
             }
             

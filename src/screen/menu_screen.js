@@ -7,6 +7,7 @@ const MenuScreen=()=>{
              <NavBar/>
         <h3>Welcome to MenuScreen</h3>
         <Card/>
+        
         </>
     )
 }
