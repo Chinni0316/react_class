@@ -20,6 +20,7 @@ const RecipesScreen=()=>{
     if(status===200){
        setRecipes(data)
        console.log(data)
+    
     }
     }
        catch(err){
@@ -32,11 +33,11 @@ const RecipesScreen=()=>{
         <h3>Welcome to RecipesScreen </h3>
         {
             Object.keys(recipes).length>0?(
-            <div>
+            <div className="card">
             <h3>Data retrived successfully..</h3>
             <h3>DishName: {recipes.name}</h3>
             <img src={recipes.image} width={200} height={200}/>
-            <h3>MealType:{recipes.mealType}</h3>
+            <h5>MealType:{recipes.mealType}</h5>
             <ul><b>Ingredients:</b>
             {recipes.ingredients.map((ingredient,index)=>(
                  <li>{ingredient}</li>
@@ -51,6 +52,7 @@ const RecipesScreen=()=>{
             {console.log(recipes)}
             </div>):(
             <>
+            
             <CustomSpinner/>
             <h3>please data is loading..</h3>
             </>

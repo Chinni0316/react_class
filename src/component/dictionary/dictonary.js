@@ -1,6 +1,7 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
+import "./dictionary.css"
 
 const Dictionary = () => {
   const [dictionary, setDictionary] = useState([]);
@@ -45,7 +46,7 @@ const Dictionary = () => {
         ))}
       </select>
       {Object.keys(selectedDefinition).length > 0 && (
-        <div>
+        <div className="box">
           <h3>Definitions:</h3>
           <ul>
             {selectedDefinition.definitions.map((def, index) => (

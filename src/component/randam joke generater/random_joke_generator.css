@@ -1,0 +1,32 @@
+.Card{
+   
+    background-color: rgb(226, 141, 233);
+    margin:30px 350px;
+    text-align: center;
+    padding: 10px 10px;
+    color: black;
+    text-decoration: none;
+    border-radius:15px;
+    transition: background-color 0.2s;
+}
+.jokes{
+    text-align: center;
+}
+
+.Card:hover{
+    transform: scale(1.05);
+}
+.Card .btn1 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #90b9d4;
+    color: #ac3737;
+    text-decoration:none;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+  }
+  .Card.btn1:hover {
+    background-color: #2980b9;
+  }
+
