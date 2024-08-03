@@ -1,19 +1,21 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+
 import "./recipes.css"
 
 
 const RecipesData=()=>{
-    // const {recipesId}=useParams
-    const [recipes,setRecipes]=useState([])
-    const [select,setSelect]=useState({})
+
+    const [recipes,setRecipes]=useState([]);
+    const [select,setSelect]=useState({});
+    const [filteredRecipes,setFilteredRecipes]=useState([]);
+    const [searchQuery,setSearchQuery]=useState("");
 
     useEffect(()=>{
         fetchRecipes();
     },[])
    
-    const fetchRecipes=async()=>{
+    const fetchRecipes=async()=>{try{
         const {status,data}=await axios.get("https://dummyjson.com/recipes")
         console.log(data)
         const RecipesData= data.recipes.map((eachRecipes)=>{
@@ -21,6 +23,11 @@ const RecipesData=()=>{
         })
         console.log(RecipesData)
         setRecipes(RecipesData)
+        setFilteredRecipes(RecipesData)
+    }catch(err){
+        console.log("err",err)
+    }
+
 
     }
     const selectHandler=(event)=>{
@@ -41,12 +48,25 @@ const RecipesData=()=>{
 
         }
     }
+    const handlerSearch=(event)=>{
+        const query=event.target.value.toLowerCase();
+        setSearchQuery(query)
+        const filtered=recipes.filter((recipes)=>(
+            recipes.name.toLowerCase().includes(query)
+        ));
+        setFilteredRecipes(filtered)
+    }
       
   
     return(
         <div>
+        <input 
+        type="text"
+        placeholder="Search for a recipes..."
+        value={searchQuery}
+        onChange={handlerSearch}/>
         <select onChange={selectHandler}>
-            {recipes.map(eachRecipes=>{
+            {filteredRecipes.map(eachRecipes=>{
                return( <option value={eachRecipes.id}>{eachRecipes.name}</option>)
             })}
         </select>
