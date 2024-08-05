@@ -28,7 +28,7 @@ const UserScreen=()=>{
     return(
         <>
         <NavBar/>
-       <center> <h4>Welcome To RecipesScreen</h4>
+       <center> 
         <h4>Recipe listing</h4> </center>
         <div className="container">
         {
@@ -37,7 +37,7 @@ const UserScreen=()=>{
                 const {name,image,rating,id,cuisine}=each;
                  
                 return(
-                    <div className="Card1">
+                    <div className="Card1" key={each.id}>
                     <h3>{name}</h3>
                     <img src={image} width={200} height={200}/>
                     <h3>{rating}</h3>

@@ -1,0 +1,26 @@
+.main1{
+
+    background-color: #6ec6cf;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px;
+    width: 350px;
+    text-align: center;
+    overflow: hidden;
+    justify-content: space-between;
+    transition: transform 0.2s;
+}
+.main1:hover{
+    transform: scale(1.05);
+}
+.btn1{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #80c0eb;
+    color: #ac3737;
+    text-decoration:none;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+}

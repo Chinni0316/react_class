@@ -11,11 +11,10 @@ const AboutScreen=()=>{
         <>
     
         <NavBar/>
-        <h3>Welcome to Registration from</h3>
-       <ControlledRegistrationForm/>
-       {/* <Country_Name/> */}
-       <Dictionary></Dictionary>
-     
+         <br></br>
+         <center><h3>RegistrationFrom</h3></center>
+        <ControlledRegistrationForm/>
+       
         
         </>
     )
