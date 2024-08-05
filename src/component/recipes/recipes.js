@@ -1252,7 +1252,7 @@ const Items={
 function Card() {
   return (
     <div className="App">
-      <h1 className='recipes'>RECIPES</h1>
+      <h2 style={{position:"sticky"}}>RECIPES</h2>
       <div className="cards-container">
         {Items["recipes"].map((Items, id) => (
           <div className="card" key={id}>
