@@ -44,8 +44,7 @@ const RecipesData=()=>{
 
     }
         catch(err){
-            // console.log("err")
-
+            console.log("err")
         }
     }
     const handlerSearch=(event)=>{
@@ -57,8 +56,7 @@ const RecipesData=()=>{
         setFilteredRecipes(filtered)
     }
       
-  
-    return(
+     return(
         <div>
         <input 
         type="text"
@@ -78,8 +76,7 @@ const RecipesData=()=>{
                <p>MealType: {select.mealType}</p>
                <p>Rating: {select.rating}</p>
                <p>Cuisine: {select.cuisine}</p>
-
-                
+               
             </div>
         )}
         </div>

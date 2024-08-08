@@ -9,7 +9,7 @@
     text-align: center;
     overflow: hidden;
     justify-content: space-between;
-    transition: transform 0.2s;
+    /* transition: transform 0.1s; */
 }
 .container {
     display: flex;
