@@ -1,14 +1,21 @@
 import { useContext, useState } from "react"
 import { RecipeContext } from "../../navigations/navigation";
+import axios from "axios";
 
 const SearchBar=()=>{
-    const {setSearchQuery}=useContext(RecipeContext);
+    const {setSearchQuery,fetchRecipes}=useContext(RecipeContext);
     const [query,setQuery]=useState("");
       
     const searchHandler=(e)=>{
        setQuery(e.target.value);
        setSearchQuery(e.target.value);
+       fetchRecipes(e.target.value)
+       searchProducts(e.target.value)
        
+    }
+    const searchProducts=async(searchInput)=>{
+        const response=await axios.get(`https://dummyjson.com/recipes/search?q=${searchInput}`)
+        console.log(response)
     }
     return(
         <input

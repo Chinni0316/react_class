@@ -3,8 +3,8 @@ import { DNA } from "react-loader-spinner";
 const CustomSpinner=()=>{
     return(<DNA
         visible={true}
-        height="500"
-        width="500"
+        height="300"
+        width="300"
         ariaLabel="dna-loading"
         wrapperStyle={{}}
         wrapperClass="dna-wrapper"

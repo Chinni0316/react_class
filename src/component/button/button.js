@@ -1,6 +1,8 @@
-const Button_create=()=>{
+const Button_create=(prop)=>{
+    const {text,onPress}=prop
     return(
-        <button>sing up</button>
+
+        <button onClick={onPress}>{text}</button>
     )
 }
 export default Button_create;

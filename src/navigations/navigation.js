@@ -15,6 +15,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import SearchBar from "../component/search_component/search"
 import Footer from "../component/footer/footer"
+import Admin_screen from "../screen/admin_screen"
 
  export const RecipeContext=createContext();
 const NavigationStack=()=>{
@@ -22,6 +23,7 @@ const NavigationStack=()=>{
     const [favoriteDish,setFavoriteDish]=useState([])
     const [searchQuery,setSearchQuery]=useState("");
     const [filteredRecipes,setFilteredRecipes]=useState([]);
+
     
     useEffect(()=>{
         fetchRecipes()
@@ -31,17 +33,18 @@ const NavigationStack=()=>{
     );
     setFilteredRecipes(results)
     },[searchQuery,recipe])
-    const fetchRecipes=async()=>{
+    const fetchRecipes=async(searchInput="")=>{
         try{
-            const {data,status}=await axios .get("https://dummyjson.com/recipes")
-            const newData=data.recipes.map((EachData)=>{
-                return {...EachData,existInFavorite:false}
-            })
-            console.log(newData,"newdata")
+            const {data,status}=await axios .get(`https://dummyjson.com/recipes/search?q=${searchInput}`)
+            const newData=data.recipes.map((EachData)=>{               
+                 return {...EachData,existInFavorite:false}
+                })
+            console.log(newData,"newData")
             if(status==200){
             console.log(data)
             setRecipes(newData)
         }
+
         }catch(err){
             console.log(err)
         }
@@ -65,20 +68,17 @@ const NavigationStack=()=>{
             toast.error("already exists in favorite food..", {
                 position: "top-right"
               });
-            // toast("already exists in favorite food..")
-            // alert("already exists in favorite food..")
+           
         }
     }
     const removeFromFavorite=(id)=>{
         const newFavoriteList=favoriteDish.filter(eachDish=>eachDish.id!=id);
         const newRecipesList=recipe.map((eachRecipes)=>{
             if(eachRecipes.id==id){
-                  return{...eachRecipes,existInFavorite:false}
-               
+                return{...eachRecipes,existInFavorite:false}
             } 
             else{
                 return eachRecipes
-                
             }
         })
         setRecipes(newRecipesList)
@@ -91,35 +91,35 @@ const NavigationStack=()=>{
         }
         
     }
-
+   
+    
     return(
-        <RecipeContext.Provider value={{
+      <RecipeContext.Provider value={{
             recipe:recipe,
             favoriteDish:favoriteDish,
             addFavoriteDishHandler:addFavoriteDishHandler,
             removeFromFavorite:removeFromFavorite,
             setSearchQuery:setSearchQuery,
+            fetchRecipes:fetchRecipes,
+            RecipeContext:RecipeContext
+            
+           
             
         }}>
         <BrowserRouter>
        
         <Routes>
             <Route path="/" element={<HomeScreen/>}/>
-            <Route path="registration" element={<AboutScreen/>}/>
-            <Route path="favorite" element={<BlogScreen/>}/>
-            <Route path="location" element={<SettingScreen/>}/>
-            <Route path="menu" element={<MenuScreen/>}/>
+            <Route path="/favorite" element={<BlogScreen/>}/>
             <Route path="*" element={<InvalidScreen/>}/>
-            <Route path="recipes" element={<UserScreen/>}/>
-       
             <Route path="recipes/:cuisine/:recipesId" element={<RecipesScreen/>}/>
-     
-            
-        </Routes>
+            {/* <Route path="admin" element={<AdminScreen/>}/> */}
+            <Route path="setting" element={<SettingScreen/>}/>
+          </Routes>
 
         </BrowserRouter>
         <ToastContainer />
-        <Footer/>
+        {/* <Footer/> */}
         </RecipeContext.Provider>
     )
 }
