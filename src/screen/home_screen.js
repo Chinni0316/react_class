@@ -24,10 +24,6 @@ const HomeScreen=()=>{
     const goToFavoriteHandler=()=>{
         navigate("favorite")
     }
-    
-   
-   
-    
     return(
         <>
         <NavBar/>
@@ -39,17 +35,17 @@ const HomeScreen=()=>{
             return(
                 <div className="main1" key={each.id}>
                     {console.log(each.id,"id")}
-                <h3> {each.name}</h3>
-                <img src={each.image} width={300} height={300}/>
-                <p className="style1"><b>Cuisine:</b> {each.cuisine}</p>
-                <p className="style1"><b>MealType: </b>{each.mealType}</p>
+                   <h3> {each.name}</h3>
+                   <img src={each.image} width={300} height={300}/>
+                   <p className="style1"><b>Cuisine:</b> {each.cuisine}</p>
+                   <p className="style1"><b>MealType: </b>{each.mealType}</p>
               
-                <h5>Rating: {each.rating}</h5>
-                {each.existInFavorite?(
-                <button onClick={goToFavoriteHandler} className="btn1">Go to Favorite</button>):(
-                <><button onClick={()=>addFoodHandler(each)} className="btn1">Add Favorite</button><br></br>
-                <button className="btn"w7><Link to={`/recipes/${each.cuisine}/${each.id}`}>See more</Link></button>
-                </>)}
+                    <h5>Rating: {each.rating}</h5>
+                    {each.existInFavorite?(
+                    <button onClick={goToFavoriteHandler} className="btn1">Go to Favorite</button>):(
+                    <><button onClick={()=>addFoodHandler(each)} className="btn1">Add Favorite</button><br></br>
+                    <button className="btn"w7><Link to={`/recipes/${each.cuisine}/${each.id}`}>See more</Link></button>
+                   </>)}
                 </div>
             )
         })}

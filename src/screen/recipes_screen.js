@@ -6,7 +6,7 @@ import CustomSpinner from "../component/spinner/custom_spinner";
 import { toast } from "react-toastify";
 import { FcAddRow } from "react-icons/fc";
 import { RecipeContext } from "../navigations/navigation";
-import Footer from "../component/footer/footer";
+
 
 
 const RecipesScreen=()=>{
@@ -58,7 +58,7 @@ const RecipesScreen=()=>{
        <NavBar/>
         {
             Object.keys(recipes).length>0?(
-            <div className="card">
+        <div className="card">
             
             <h3>{recipes.name}</h3>
             <img src={recipes.image} width={400} height={400}/>
@@ -79,16 +79,14 @@ const RecipesScreen=()=>{
               <button  className="btn1"onClick={ goToFavoriteHandler}>Go to Favorite</button>
              <button className="btn1" onClick={()=>selectHandler(recipes)}>Add to Favorite</button>
              
-            </div>
+        </div>
             ):(
             <>
-            
             <CustomSpinner/>
             <h3>Please data is loading..</h3>
             </>
             )
         }
-        
         </>
     )
 }
