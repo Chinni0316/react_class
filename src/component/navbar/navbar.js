@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { RecipeContext } from "../../navigations/navigation";
 
 const NavBar=()=>{
-    const LinkStyle={margin:150,textDecoration:"none"}
+    const LinkStyle={margin:100,textDecoration:"none"}
 
     const {favoriteDish}=useContext(RecipeContext)
    
@@ -26,10 +26,10 @@ const NavBar=()=>{
          <NavLink to={"/recipes"} style={LinkStyle}>Recipes</NavLink>
 
         </li>
-        {/* <li className="nav-item">
+        <li className="nav-item">
          <NavLink to={"/admin"} style={LinkStyle}>Admin</NavLink>
 
-        </li> */}
+        </li>
         <li className="nav-item">
          <NavLink to={"/setting"} style={LinkStyle}>Setting</NavLink>
 

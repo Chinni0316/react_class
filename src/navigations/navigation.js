@@ -22,17 +22,13 @@ const NavigationStack=()=>{
     const [recipe,setRecipes]=useState([])
     const [favoriteDish,setFavoriteDish]=useState([])
     const [searchQuery,setSearchQuery]=useState("");
-    const [filteredRecipes,setFilteredRecipes]=useState([]);
+  
 
     
     useEffect(()=>{
         fetchRecipes()
     },[])
-    useEffect(()=>{
-        const results=recipe.filter(recipes=>recipes.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    setFilteredRecipes(results)
-    },[searchQuery,recipe])
+    
     const fetchRecipes=async(searchInput="")=>{
         try{
             const {data,status}=await axios .get(`https://dummyjson.com/recipes/search?q=${searchInput}`)
@@ -89,10 +85,7 @@ const NavigationStack=()=>{
         }else{
             toast.error("Remove favorite.")
         }
-        
     }
-   
-    
     return(
       <RecipeContext.Provider value={{
             recipe:recipe,
@@ -102,9 +95,6 @@ const NavigationStack=()=>{
             setSearchQuery:setSearchQuery,
             fetchRecipes:fetchRecipes,
             RecipeContext:RecipeContext
-            
-           
-            
         }}>
         <BrowserRouter>
        
@@ -113,13 +103,13 @@ const NavigationStack=()=>{
             <Route path="/favorite" element={<BlogScreen/>}/>
             <Route path="*" element={<InvalidScreen/>}/>
             <Route path="recipes/:cuisine/:recipesId" element={<RecipesScreen/>}/>
-            {/* <Route path="admin" element={<AdminScreen/>}/> */}
+            <Route path="admin" element={<AdminScreen/>}/>
             <Route path="setting" element={<SettingScreen/>}/>
           </Routes>
 
         </BrowserRouter>
         <ToastContainer />
-        {/* <Footer/> */}
+      
         </RecipeContext.Provider>
     )
 }
