@@ -9,7 +9,6 @@ class Country_Name  extends Component{
         error:false
     };
     fetch_data=async()=>{
-    
         try{
             const {status,data}=await axios.get ("https://restcountries.com/v3.1/all");
             console.log(status,data)
@@ -18,7 +17,6 @@ class Country_Name  extends Component{
                     country:data,
                     loader:false
                 })
-
             }
         }
         catch(err){
@@ -26,7 +24,6 @@ class Country_Name  extends Component{
                 error:true,
                 loader:false
             })
-
         }
 
     }
@@ -36,9 +33,7 @@ class Country_Name  extends Component{
     render(){
         return(
             <React.Fragment>
-            {/* <h2>hello</h2>
-            <p>hiii</p>
-            <p>hello world </p> */}
+           
             {
                 this.state.loader?
                 <h4>Please wait.....</h4>

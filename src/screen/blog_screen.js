@@ -6,8 +6,10 @@ import ListItem from "../component/List/ListItems";
 import NavBar from "../component/navbar/navbar";
 import { RecipeContext } from "../navigations/navigation";
 import Footer from "../component/footer/footer";
+import FunctionCards from "../component/cards/cards";
 
 const BlogScreen=()=>{
+    
     const {recipe, favoriteDish, removeFromFavorite,
         addFavoriteDishHandler}=useContext(RecipeContext)
     // console.log(favoriteDish1,"favorite1")
@@ -37,6 +39,7 @@ const BlogScreen=()=>{
             </div>:
             <h3>No Dish yet now.. you need select the favorite dish..</h3>
         }
+        <FunctionCards/>
          <Footer/>
         </>
     )

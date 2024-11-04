@@ -6,7 +6,7 @@ const withProfile=(Component)=>{
   
     return()=>{
         
-            const [profileData, setProfileData] = useState({});
+          const [profileData, setProfileData] = useState({});
         
             useEffect(() => {
               fetchData();

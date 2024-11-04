@@ -9,7 +9,7 @@ const Heading=(prop)=>{
 }
 export default Heading;
 // named component creations..
-  export const Heading1=()=>{
+export const Heading1=()=>{
     return(
         <h2>Student Details</h2>
     )
