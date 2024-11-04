@@ -5,6 +5,7 @@ import Card from "../component/recipes/recipes";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./user_screen.css"
+import CardComponent from "../component/cards/cards";
 
 const UserScreen=()=>{
     const [recipes,setRecipes]=useState([])
@@ -48,7 +49,9 @@ const UserScreen=()=>{
                 
             })
         }
+        
         </div>
+      
         </>
     )
 }

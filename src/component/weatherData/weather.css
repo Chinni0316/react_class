@@ -1,0 +1,47 @@
+.container1{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+    padding: 20px;
+    /* background-image: url("https://i0.wp.com/eos.org/wp-content/uploads/2019/09/cumulus-clouds-blue-sky.jpg?fit=820%2C615&ssl=1"); */
+
+}
+.input{
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    border: 2px solid lightgray;
+    text-align: center;
+    border-radius: 10px ;
+    font-size: 17px;
+
+
+}
+.input:focus{
+    outline: none;
+}
+/* .btn2{
+    border: 2px solid lightgray;
+    
+} */
+ /* Weather.css */
+.btn2 {
+    background-color: #4CAF50; /* Green background */
+    border: none;              /* Remove borders */
+    color: white;              /* White text */
+    padding: 12px 24px;        /* Some padding */
+    text-align: center;        /* Center text */
+    text-decoration: none;     /* Remove underline */
+    display: inline-block;     /* Get elements to sit next to each other */
+    font-size: 16px;           /* Set a font size */
+    margin: auto;          /* Add some margin */
+    cursor: pointer;           /* Pointer/hand icon */
+    border-radius: 8px;        /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .btn2:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  

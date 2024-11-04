@@ -104,7 +104,8 @@ const NavigationStack=()=>{
             <Route path="*" element={<InvalidScreen/>}/>
             <Route path="recipes/:cuisine/:recipesId" element={<RecipesScreen/>}/>
             <Route path="admin" element={<AdminScreen/>}/>
-            <Route path="setting" element={<SettingScreen/>}/>
+            <Route path="weather" element={<SettingScreen/>}/>
+            <Route path="cards" element={<UserScreen/>}/>
           </Routes>
 
         </BrowserRouter>
