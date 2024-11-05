@@ -63,12 +63,8 @@ const AdminScreen=(props)=>{
       
 
       /></center> */}
-<<<<<<< HEAD
       {/* <center><SearchBar1/></center> */}
       
-=======
-      // <center><SearchBar1/></center>
->>>>>>> 370e0f7d1feefc8dc34d53c332bcc6002545a840
       <div className="container">
       {country.map((each)=>{
         return(
