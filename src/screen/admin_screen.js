@@ -63,7 +63,12 @@ const AdminScreen=(props)=>{
       
 
       /></center> */}
-      <center><SearchBar1/></center>
+<<<<<<< HEAD
+      {/* <center><SearchBar1/></center> */}
+      
+=======
+      // <center><SearchBar1/></center>
+>>>>>>> 370e0f7d1feefc8dc34d53c332bcc6002545a840
       <div className="container">
       {country.map((each)=>{
         return(
@@ -72,8 +77,7 @@ const AdminScreen=(props)=>{
             <p>Region: {each.region}</p>
             <img src={each.flags.png}  height={250}/>
             <p>capital: {each.capital}</p>
-            <p>suffixes :{each.idd.
-suffixes}</p>
+            <p>suffixes :{each.idd.suffixes}</p>
             
             <ul>
             {filtered.map((country) => (
