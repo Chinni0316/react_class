@@ -6,37 +6,7 @@ export default class FetchExamples extends Component{
         loader:true,
         error:(false),
     };
-    // we need fetch the data using fetch method 
-    // fetchProducts=()=>{
-    //     fetch("https://fakestoreapi.com/products")
-    //     .then((res)=>res.json())
-    //     .then((result)=>this.setState({products:result,loader:false}))
-       
-    // };
     
-    //  we need fetch the data using the async and await method in the api data...
-    // fetchProducts=async()=>{
-    //     try{
-    //  const response=await fetch("https://fakestoreapi.com/products")
-    //  const finalresponse=await response.json();
-    //  this.setState({
-    //     products:finalresponse,
-    //     loader:false
-
-    //  })
-    //  console.log(finalresponse)
-    // }
-    //  catch(error){
-    //     this.setState({
-    //         error:true
-    //     }); 
-    // }
-    // finally{
-    //     this.setState({
-    //         loader:false
-    //     })
-    // };
-    // }
     fetchProducts=async()=>{
         try{
         const response=await axios.get("https://fakestoreapi.com/products");

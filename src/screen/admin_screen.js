@@ -8,43 +8,45 @@ import ChildComponent from "../component/reactmemo/child";
 import ParentComponent from "../component/reactmemo/parent";
 import axios from "axios";
 import SearchBar1 from "../component/search_component/searchinput";
+import SearchBar from "../component/search_component/search";
 
 const AdminScreen=(props)=>{
-    // const {name}=props.data
-    // console.log(props)
-    const [country,setCountry]=useState([]);
-    const [search,setSearch]=useState("");
-    const [filtered,setFiltered]=useState([]);
-    useEffect(()=>{
-        const filteredData=country.filter(country=>{
-            country.name.common.toLowerCase().includes(search.toLowerCase())
-            // console.log(filteredData,"filtered")
-        })
-        setFiltered(filteredData)
-    },[search,country])
+    // // const {name}=props.data
+    // // console.log(props)
+    // const [country,setCountry]=useState([]);
+    // const [search,setSearch]=useState("");
+    // const [filtered,setFiltered]=useState([]);
+    // useEffect(()=>{
+    //     const filteredData=country.filter(country=>{
+    //         country.name.common.toLowerCase().includes(search.toLowerCase())
+    //         // console.log(filteredData,"filtered")
+    //     })
+    //     setFiltered(filteredData)
+    // },[search,country])
     
       
-    useEffect(()=>{
-        fetchCountry();
-    },[])
-    const fetchCountry=async()=>{
-        try{
-            const {data,status}=await axios.get("https://restcountries.com/v3.1/all")
-            if(status===200){
-                console.log(data)
-                setCountry(data)
-            }
+    // useEffect(()=>{
+    //     fetchCountry();
+    // },[])
+    // const fetchCountry=async()=>{
+    //     try{
+    //         const {data,status}=await axios.get("https://restcountries.com/v3.1/all")
+    //         if(status===200){
+    //             console.log(data)
+    //             setCountry(data)
+    //         }
 
-        }catch(err){
-            console.log("err",err)
-        }
-    }
-    const searchHandler=(e)=>{
-        setSearch(e.target.value)
-    }
+    //     }catch(err){
+    //         console.log("err",err)
+    //     }
+    // }
+    // const searchHandler=(e)=>{
+    //     setSearch(e.target.value)
+    // }
     return(
         <>
         <NavBar/>
+    
         {/* <h3>Welcome to AdminScreen{name}</h3>
        {
         Object.keys(props.data).length>0?(
@@ -65,7 +67,7 @@ const AdminScreen=(props)=>{
       /></center> */}
       {/* <center><SearchBar1/></center> */}
       
-      <div className="container">
+      {/* <div className="container">
       {country.map((each)=>{
         return(
             <div key={each.index} className="card">
@@ -94,7 +96,9 @@ const AdminScreen=(props)=>{
 
 
         <Footer/>
-        </div>
+
+        </div> */}
+        <Footer/>
         </>
     )
 }

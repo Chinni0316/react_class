@@ -103,7 +103,7 @@ const NavigationStack=()=>{
             <Route path="/favorite" element={<BlogScreen/>}/>
             <Route path="*" element={<InvalidScreen/>}/>
             <Route path="recipes/:cuisine/:recipesId" element={<RecipesScreen/>}/>
-            <Route path="admin" element={<AdminScreen/>}/>
+           
             <Route path="weather" element={<SettingScreen/>}/>
             <Route path="cards" element={<UserScreen/>}/>
           </Routes>

@@ -25,11 +25,7 @@ const SettingScreen=()=>{
 
        
         
-        {/* <FakeStore/>
-        <DishListing/>
-        <ExpensiveCalculation/> 
-        <img src="https://storage.googleapis.com/support-forums-api/attachment/message-127331309-17243804224915650280.JPG" width={"100%"} height={"100%"}/> 
-     <Counter1/> */}
+     
        
         </div>
     )

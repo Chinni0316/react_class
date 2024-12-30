@@ -39,7 +39,7 @@ const BlogScreen=()=>{
             </div>:
             <h3>No Dish yet now.. you need select the favorite dish..</h3>
         }
-        <FunctionCards/>
+        {/* <FunctionCards/> */}
          <Footer/>
         </>
     )

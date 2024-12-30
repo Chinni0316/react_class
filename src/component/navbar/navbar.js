@@ -26,10 +26,7 @@ const NavBar=()=>{
          <NavLink to={"/recipes"} style={LinkStyle}>Recipes</NavLink>
 
         </li>
-        <li className="nav-item">
-         <NavLink to={"/admin"} style={LinkStyle}>Admin</NavLink>
-
-        </li>
+        
         <li className="nav-item">
          <NavLink to={"/weather"} style={LinkStyle}>WeatherData</NavLink>
 
